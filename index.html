@@ -49,15 +49,21 @@ section{min-height:100vh;display:flex;flex-direction:column;justify-content:cent
 .bar-track{flex:1;height:3px;background:#222;border-radius:2px;overflow:hidden}
 .bar-fill{height:100%;width:0%;background:var(--fg);border-radius:2px;transition:width 1.2s cubic-bezier(.16,1,.3,1)}
 
-/* Result blocks */
-.result-block{display:flex;gap:2rem;align-items:flex-start;margin:2.5rem 0;padding:2rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
-.result-info{flex:1;min-width:200px}
-.result-info h3{font-family:var(--font-head);font-size:1.3rem;margin-bottom:.3rem}
-.result-info .price{font-family:var(--font-head);font-size:1.1rem;color:var(--accent);margin-top:.8rem}
-.result-embed{flex:1.2;min-width:280px}
-.result-embed iframe{width:100%;aspect-ratio:16/9;border-radius:8px;background:#111}
-.result-block:last-child{border-bottom:none}
-@media(max-width:700px){.result-block{flex-direction:column}.result-embed{width:100%}}
+/* BENTO RESULTS GRID */
+.bento-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:3rem}
+.bento-card{border:1px solid #222;border-radius:16px;overflow:hidden;transition:border-color .3s,transform .3s;cursor:pointer;position:relative;background:#111}
+.bento-card:hover{border-color:var(--accent);transform:translateY(-4px)}
+.bento-wide{grid-column:1/-1}
+.bento-card .card-embed{width:100%;overflow:hidden;position:relative}
+.bento-wide .card-embed iframe{width:100%;aspect-ratio:16/9;border:none;display:block}
+.bento-vertical .card-embed{aspect-ratio:9/16;max-height:520px}
+.bento-vertical .card-embed iframe{width:100%;height:100%;border:none;display:block;position:absolute;inset:0}
+.bento-vertical .card-embed{position:relative}
+.card-info{padding:1.2rem 1.5rem}
+.card-info h3{font-family:var(--font-head);font-size:1.1rem;margin-bottom:.2rem}
+.card-info .source{font-size:.8rem;color:var(--muted)}
+.card-info .stat{font-family:var(--font-head);font-size:1rem;color:var(--accent);margin-top:.5rem;font-weight:600}
+@media(max-width:700px){.bento-grid{grid-template-columns:1fr}.bento-vertical .card-embed{max-height:420px}}
 
 /* CTA button */
 .cta-btn{display:inline-block;margin-top:1.5rem;padding:.9rem 2.2rem;border:1px solid var(--fg);color:var(--fg);text-decoration:none;font-family:var(--font-head);font-size:1rem;letter-spacing:.05em;border-radius:4px;transition:all .3s ease}
@@ -184,39 +190,40 @@ j'apporte une rigueur journalistique aux marques qui veulent créer du contenu �
 <div class="section-num reveal"><span>(004)</span> Résultats</div>
 <h2 class="reveal" style="font-family:var(--font-head);font-size:clamp(1.5rem,3vw,2.5rem);font-weight:300;">Ce que ça donne<br><span style="color:var(--accent)">concrètement.</span></h2>
 
-<div class="result-block reveal">
-<div class="result-info">
-<h3>Rap Business</h3>
-<p style="color:var(--muted);font-size:.85rem;margin-bottom:.5rem">Le Monde</p>
-<p>Série documentaire motion design sur l'économie du rap français.</p>
-<div class="price">1.6M de vues</div>
-</div>
-<div class="result-embed">
+<!-- YouTube: pleine largeur, format horizontal -->
+<div class="bento-grid">
+<div class="bento-card bento-wide reveal">
+<div class="card-embed">
 <iframe src="https://www.youtube.com/embed/EnmFir63iN4" title="Rap Business — Le Monde" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
 </div>
+<div class="card-info">
+<h3>Rap Business</h3>
+<span class="source">Le Monde — Série documentaire motion design</span>
+<div class="stat">1.6M de vues</div>
+</div>
 </div>
 
-<div class="result-block reveal">
-<div class="result-info">
-<h3>C Quoi L'Info</h3>
-<p style="color:var(--muted);font-size:.85rem;margin-bottom:.5rem">France Télévisions</p>
-<p>Format viral actu pensé pour la Gen Z. Direction artistique et motion design.</p>
-<div class="price">4M de vues</div>
-</div>
-<div class="result-embed">
+<!-- IG vertical côte à côte -->
+<div class="bento-card bento-vertical reveal">
+<div class="card-embed">
 <iframe src="https://www.instagram.com/p/DUib9-CCD1R/embed" title="C Quoi L'Info — France TV" frameborder="0" scrolling="no" allowtransparency="true" loading="lazy"></iframe>
 </div>
+<div class="card-info">
+<h3>C Quoi L'Info</h3>
+<span class="source">France Télévisions — DA & motion design</span>
+<div class="stat">4M de vues</div>
+</div>
 </div>
 
-<div class="result-block reveal">
-<div class="result-info">
-<h3>Contenu personnel</h3>
-<p style="color:var(--muted);font-size:.85rem;margin-bottom:.5rem">Instagram / TikTok</p>
-<p>Formats éditoriaux sport, culture, politique. Plusieurs vidéos à 1M+ de vues.</p>
-<div class="price">3.8M vues / 30 jours</div>
-</div>
-<div class="result-embed">
+<div class="bento-card bento-vertical reveal">
+<div class="card-embed">
 <iframe src="https://www.instagram.com/p/DPqJqwCDOhM/embed" title="Contenu personnel — Alain Mbouche" frameborder="0" scrolling="no" allowtransparency="true" loading="lazy"></iframe>
+</div>
+<div class="card-info">
+<h3>Contenu personnel</h3>
+<span class="source">Instagram / TikTok — Sport, culture, politique</span>
+<div class="stat">3.8M vues / 30 jours</div>
+</div>
 </div>
 </div>
 
@@ -271,7 +278,6 @@ j'apporte une rigueur journalistique aux marques qui veulent créer du contenu �
 <section class="contact-section">
 <div class="section-num reveal"><span>(007)</span> Contact</div>
 <div class="contact-big reveal">PARLONS<br><span style="color:var(--accent)">PROJET</span></div>
-<a href="https://cal.com/alain-mbouche-vfohij/point-edito?user=alain-mbouche-vfohij&overlayCalendar=true" target="_blank" class="cta-btn reveal">📅 Réserver un créneau</a>
 <a href="mailto:alain.mbouche@gmail.com" class="contact-email reveal">alain.mbouche@gmail.com</a>
 <div class="contact-socials reveal">
 <a href="https://instagram.com/alainmbouche" target="_blank">Instagram</a>
