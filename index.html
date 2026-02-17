@@ -47,7 +47,7 @@ section{min-height:100vh;display:flex;flex-direction:column;justify-content:cent
 .bar-row{display:flex;align-items:center;gap:1rem;margin-bottom:.8rem}
 .bar-label{font-size:.85rem;min-width:80px;color:var(--muted)}
 .bar-track{flex:1;height:3px;background:#222;border-radius:2px;overflow:hidden}
-.bar-fill{height:100%;background:var(--fg);border-radius:2px;transition:width 1.2s cubic-bezier(.16,1,.3,1)}
+.bar-fill{height:100%;width:0%;background:var(--fg);border-radius:2px;transition:width 1.2s cubic-bezier(.16,1,.3,1)}
 .bar-val{font-family:var(--font-head);font-size:.85rem;min-width:40px;text-align:right}
 
 /* REFS */
@@ -91,7 +91,7 @@ section{padding:clamp(2rem,6vw,4rem) 1.25rem}
 <section class="hero">
 <div>
 <h1 class="hero-name reveal">ALAIN<br><span class="accent">MBOUCHE</span></h1>
-<p class="hero-tag reveal">Créateur de contenu éditorial · Sport · Culture · Politique</p>
+<p class="hero-tag reveal">Journaliste-créateur · Stratégie éditoriale · Sport · Culture · Politique</p>
 </div>
 <div class="scroll-hint">
 <span>Scroll</span>
@@ -102,11 +102,11 @@ section{padding:clamp(2rem,6vw,4rem) 1.25rem}
 <!-- 001 ABOUT -->
 <section>
 <div class="section-num reveal"><span>(001)</span> À propos</div>
-<h2 class="hero-name reveal" style="font-size:clamp(1.8rem,4vw,4rem);">Journaliste-créateur,<br>monteur senior,<br>motion designer.</h2>
+<h2 class="hero-name reveal" style="font-size:clamp(1.8rem,4vw,4rem);">Journaliste-créateur,<br>stratège éditorial,<br>producteur vidéo.</h2>
 <p class="reveal" style="max-width:600px;color:var(--muted);margin-top:2rem;line-height:1.8;font-size:clamp(.9rem,1.2vw,1.05rem);">
-Passé par <strong style="color:var(--fg)">France Télévisions</strong>, <strong style="color:var(--fg)">Le Monde</strong> et <strong style="color:var(--fg)">Clique TV</strong>. 
-Je fabrique du contenu éditorial qui performe — pas du remplissage algorithmique. 
-Sport, culture, politique : je raconte des histoires qui touchent et qui restent.
+Je conçois des stratégies éditoriales vidéo qui transforment des sujets complexes en contenus viraux. 
+Passé par <strong style="color:var(--fg)">France Télévisions</strong>, <strong style="color:var(--fg)">Le Monde</strong> et <strong style="color:var(--fg)">Clique TV</strong>, 
+j'apporte une rigueur journalistique aux marques qui veulent créer du contenu à forte valeur — pas du remplissage algorithmique.
 </p>
 </section>
 
@@ -115,10 +115,6 @@ Sport, culture, politique : je raconte des histoires qui touchent et qui restent
 <div class="section-num reveal"><span>(002)</span> Métriques</div>
 <h2 class="reveal" style="font-family:var(--font-head);font-size:clamp(1.5rem,3vw,2.5rem);font-weight:300;max-width:500px;">Les chiffres parlent.<br><span style="color:var(--accent)">Pas de vanity metrics.</span></h2>
 <div class="metric-grid">
-<div class="metric reveal">
-<div class="number"><span data-count="26">0</span><span class="unit">M+</span></div>
-<div class="label">Vues cumulées</div>
-</div>
 <div class="metric reveal">
 <div class="number"><span data-count="3.8">0</span><span class="unit">M</span></div>
 <div class="label">Views / 30 jours</div>
@@ -169,9 +165,35 @@ Sport, culture, politique : je raconte des histoires qui touchent et qui restent
 </div>
 </section>
 
-<!-- 004 REFERENCES -->
+<!-- 004 RÉSULTATS -->
 <section>
-<div class="section-num reveal"><span>(004)</span> Références</div>
+<div class="section-num reveal"><span>(004)</span> Résultats</div>
+<h2 class="reveal" style="font-family:var(--font-head);font-size:clamp(1.5rem,3vw,2.5rem);font-weight:300;">Ce que ça donne<br><span style="color:var(--accent)">concrètement.</span></h2>
+<div class="services-grid">
+<div class="service-card reveal">
+<h3>Rap Business</h3>
+<p style="color:var(--muted);font-size:.85rem;margin-bottom:.5rem">Le Monde</p>
+<p>Série documentaire motion design sur l'économie du rap français.</p>
+<div class="price">1.6M de vues</div>
+</div>
+<div class="service-card reveal">
+<h3>C Quoi L'Info</h3>
+<p style="color:var(--muted);font-size:.85rem;margin-bottom:.5rem">France Télévisions</p>
+<p>Format viral actu pensé pour la Gen Z. Direction artistique et motion design.</p>
+<div class="price">4M de vues</div>
+</div>
+<div class="service-card reveal">
+<h3>Contenu personnel</h3>
+<p style="color:var(--muted);font-size:.85rem;margin-bottom:.5rem">Instagram / TikTok</p>
+<p>Formats éditoriaux sport, culture, politique. Plusieurs vidéos à 1M+ de vues.</p>
+<div class="price">3.8M vues / 30 jours</div>
+</div>
+</div>
+</section>
+
+<!-- 005 REFERENCES -->
+<section>
+<div class="section-num reveal"><span>(005)</span> Références</div>
 <h2 class="reveal" style="font-family:var(--font-head);font-size:clamp(1.5rem,3vw,2.5rem);font-weight:300;">Ils m'ont fait confiance.</h2>
 <div class="ref-list reveal">
 <span class="ref-item">France Télévisions</span>
@@ -179,35 +201,44 @@ Sport, culture, politique : je raconte des histoires qui touchent et qui restent
 <span class="ref-item">Le Monde</span>
 <span class="ref-divider"></span>
 <span class="ref-item">Clique TV</span>
+<span class="ref-divider"></span>
+<span class="ref-item">Amnesty International</span>
+<span class="ref-divider"></span>
+<span class="ref-item">Frive</span>
 </div>
 </section>
 
-<!-- 005 SERVICES -->
+<!-- 006 SERVICES -->
 <section>
-<div class="section-num reveal"><span>(005)</span> Services & Tarifs</div>
+<div class="section-num reveal"><span>(006)</span> Services & Tarifs</div>
 <h2 class="reveal" style="font-family:var(--font-head);font-size:clamp(1.5rem,3vw,2.5rem);font-weight:300;">Ce que je propose.</h2>
 <div class="services-grid">
 <div class="service-card reveal">
-<h3>Brand Content</h3>
-<p>Création de contenu éditorial aligné avec votre marque. Concept, production, post-production.</p>
-<div class="price">À partir de 2 000€</div>
+<h3>Brand Content Éditorial</h3>
+<p>Création d'un contenu éditorial clé en main : concept, script, tournage, post-production.</p>
+<div class="price">À partir de 2 500€</div>
 </div>
 <div class="service-card reveal">
-<h3>Placement Produit</h3>
-<p>Intégration organique dans mon contenu existant. Story, Reel, ou format long.</p>
-<div class="price">Sur devis</div>
+<h3>Stratégie Éditoriale & Consulting</h3>
+<p>Audit de votre présence vidéo, recommandations stratégiques, planning éditorial.</p>
+<div class="price">À partir de 1 500€ / jour</div>
 </div>
 <div class="service-card reveal">
-<h3>Montage & Motion</h3>
-<p>Montage vidéo senior, motion design, direction artistique. 10 ans d'expérience broadcast.</p>
-<div class="price">Sur devis</div>
+<h3>Placement Produit / Intégration</h3>
+<p>Intégration organique dans mon contenu (Reel, Story, format long). Audience : 40K abonnés, 10.7% d'engagement.</p>
+<div class="price">1 200€ – 3 000€</div>
+</div>
+<div class="service-card reveal">
+<h3>Montage & Motion Design</h3>
+<p>Montage vidéo senior, motion design, habillage. 12 ans d'expérience broadcast.</p>
+<div class="price">TJM : 500€</div>
 </div>
 </div>
 </section>
 
-<!-- 006 CONTACT -->
+<!-- 007 CONTACT -->
 <section class="contact-section">
-<div class="section-num reveal"><span>(006)</span> Contact</div>
+<div class="section-num reveal"><span>(007)</span> Contact</div>
 <div class="contact-big reveal">PARLONS<br><span style="color:var(--accent)">PROJET</span></div>
 <a href="mailto:alain.mbouche@gmail.com" class="contact-email reveal">alain.mbouche@gmail.com</a>
 <div class="contact-socials reveal">
